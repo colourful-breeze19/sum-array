@@ -2,23 +2,23 @@
 #include<bits/stdc++.h>
 using namespace std;
 bool hasArrayTwoCandidates(int A[], int arr_size,int sum)
-{ int l, r;
+{ int len, r;
   /* Sort the elements */
     sort(A, A + arr_size);
 
     /* Now look for the two candidates in
        the sorted array*/
-    l = 0;
+    len = 0;
     r = arr_size - 1;
-    while (l < r) {
-        if (A[l] + A[r] == sum)
+    while (len < r) {
+        if (A[len] + A[r] == sum)
         {
-            cout<<"elements are : "<<A[l]<<" & "<<A[r];
+            cout<<"elements are : "<<A[len]<<" & "<<A[r];
             return 1;
         }
-        else if (A[l] + A[r] < sum)
+        else if (A[len] + A[r] < sum)
         {
-        cout<<"elelments are :"<<A[l]<<" & "<<A[r];
+        cout<<"elelments are :"<<A[len]<<" & "<<A[r];
             l++;
         }
 
